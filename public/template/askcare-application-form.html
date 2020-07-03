@@ -1,0 +1,553 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        table {
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body style="font-family: Calibri;">
+<div style="margin: 0px auto; width: 820px;" id="DivContiner">
+    <div style="height: 1200px;">
+        <table style="width: 100%; background-color: #eae9e9">
+            <tr>
+                <td style="border: 1px solid black; padding: 10px; font-weight: bold; font-size: 30px;">Ask Care Employee Application Form <span style="font-size: 14px;">Ver 1.1</span>
+                    <br>
+                    <span style="font-size: 14px;" id="spanAppliedDetailPage1">Applied Date Time: 20/06/2020 15:56 | Source : WEB/586</span>
+                </td>
+                <td style="border: 1px solid black; padding: 10px; font-weight: bold; vertical-align: central">
+                    <img src="images/logo.png" style="float: right; height: 80px; width: 110px" /></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <table style="border: 1px solid black; padding: 10px; width: 100%;">
+            <tr>
+                <td style="width: 150px; padding-top: 20px;">Surname:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 300px" id="tdSurname"></td>
+                <td style="width: 150px; padding-top: 20px; padding-left: 10px;">Title (Mr,Mrs,Miss):</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 170px;" id="tdTitle"></td>
+            </tr>
+            <tr>
+                <td style="width: 200px; padding-top: 20px;">Previous Surname (if any):</td>
+                <td colspan="3" style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdPreviousSurname"></td>
+            </tr>
+            <tr>
+                <td style="width: 200px; padding-top: 20px;">Forname(s):</td>
+                <td colspan="3" style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdForname"></td>
+            </tr>
+            <tr>
+                <td style="width: 200px; padding-top: 20px;">Address:</td>
+                <td colspan="3" style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdAddress"></td>
+            </tr>
+            <tr>
+                <td style="width: 200px; padding-top: 20px;">Postcode</td>
+                <td colspan="3" style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdPostcode"></td>
+            </tr>
+            <tr>
+                <td style="width: 150px; padding-top: 20px;">Home Telephone:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 300px" id="tdHomeTelephone"></td>
+                <td style="width: 150px; padding-top: 20px; padding-left: 10px;">Mobile:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 170px;" id="tdMobile"></td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <table style="border: 1px solid black; padding: 10px; width: 100%;">
+            <tr>
+                <td style="width: 150px; padding-top: 20px;">Nationality:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 300px" id="tdNationality"></td>
+                <td style="width: 300px; padding-top: 20px; padding-left: 10px;">Ethnic Heritage:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 170px;" id="EthnicHeritage"></td>
+            </tr>
+            <tr>
+                <td style="width: 150px; padding-top: 20px;">Passport Number:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 300px" id="tdPassport"></td>
+                <td style="width: 200px; padding-top: 20px; padding-left: 10px;">Date of birth on your passport:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 170px;" id="tdDateOfBirthOnPassport"></td>
+            </tr>
+            <tr>
+                <td style="width: 150px; padding-top: 20px;">Issue Date:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 300px" id="tdIssueDate"></td>
+                <td style="width: 200px; padding-top: 20px; padding-left: 10px;">Expiry Date:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px; width: 170px;" id="tdExpiryDate"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="padding-top: 20px;">Are there any limitations or restrictions to your residence in the UK that might affect your right to take up
+                    employment in the UK? Such as any Visa or Residency Permits?</td>
+            </tr>
+            <tr>
+                <td colspan="1" style="border-bottom: 1px dotted gray; font-weight: bold; width: 170px;" id="tdIsAnyLimitationsOnVisa">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="width: 200px; padding-top: 20px;">If yes, what type of or restrictions?</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="border-bottom: 1px dotted gray; font-weight: bold;" id="tdLimitationsOnVisaReason">&nbsp;</td>
+            </tr>
+
+        </table>
+        <br>
+        <br>
+        <table style="border: 1px solid black; padding: 10px; width: 100%;">
+            <tr>
+                <td style="width: 200px; padding-top: 20px;">Are you a car owner? </td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdCarOwner"></td>
+                <td style="width: 280px; padding-top: 20px; padding-left: 10px;">Do you hold a valid driving licence?</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdHoldingLincence"></td>
+            </tr>
+            <tr>
+                <td style="width: 150px; padding-top: 20px;">If yes, what type of licence?</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdWhatTypeOfLicence"></td>
+                <td style="width: 200px; padding-top: 20px; padding-left: 10px;">Do you intend to use your car for work?</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdIntendToUseCarForWork"></td>
+            </tr>
+            <tr>
+                <td style="width: 150px; padding-top: 20px;">Driving Licence Number:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdDrivingLicenceNumber"></td>
+                <td style="width: 200px; padding-top: 20px; padding-left: 10px;">Do you have any current Driving convictions?</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 20px;" id="tdDrivingConvictions"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="padding-top: 20px;">If yes, what type of conviction? </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="border-bottom: 1px dotted gray; font-weight: bold; width: 170px;" id="tdWhatTypeOfConvictions">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="width: 200px; padding-top: 20px;">When do these convictions expire?</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border-bottom: 1px dotted gray; font-weight: bold;" id="tdConvictionExpire">&nbsp;</td>
+            </tr>
+
+        </table>
+        <table style="padding-top: 20px; color: gray; font-size: 12px;">
+            <tr>
+                <td style="width: 250pt;">Ask Care Ltd</td>
+                <td style="width: 150pt; text-align: center">Page 1 of 4</td>
+                <td style="width: 250pt; text-align: right;"><i>40 Argyle Road, Ilford, Essex, IG1 3BG</i></td>
+            </tr>
+        </table>
+    </div>
+    <div style="height: 1210px;">
+        <table style="width: 100%; background-color: #eae9e9">
+            <tr>
+                <td style="border: 1px solid black; padding: 10px; font-weight: bold; font-size: 30px;">Ask Care Employee Application Form <span style="font-size: 14px;">Ver 1.1</span>
+                    <br>
+                    <span style="font-size: 14px;" id="spanAppliedDetailPage2">Applied Date Time: ________ | Source : _______</span>
+                </td>
+                <td style="border: 1px solid black; padding: 10px; font-weight: bold; vertical-align: central">
+                    <img src="images/logo.png" style="float: right; height: 80px; width: 110px" /></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <table border="1" style="border: 1px solid black; padding: 10px; width: 100%; border-collapse: collapse;">
+            <tr style="text-align: center; background-color: gainsboro; font-size: 14px;">
+                <td style="width: 30%; vertical-align: central; padding: 10px;">School/ College/ University</td>
+                <td style="width: 30%; vertical-align: central">Subject</td>
+                <td style="width: 30%; vertical-align: central">Qualification or grades obtained</td>
+                <td style="width: 10%; vertical-align: central">Year</td>
+            </tr>
+            <tr style="font-weight: bold; height: 100px;">
+                <td style="padding: 10px;" id="td1School"></td>
+                <td style="padding: 10px;" id="td1Subject"></td>
+                <td style="padding: 10px;" id="td1Grade"></td>
+                <td style="padding: 10px;" id="td1Year"></td>
+            </tr>
+            <tr style="font-weight: bold; height: 100px;">
+                <td style="padding: 10px;" id="td2School"></td>
+                <td style="padding: 10px;" id="td2Subject"></td>
+                <td style="padding: 10px;" id="td2Grade"></td>
+                <td style="padding: 10px;" id="td2Year"></td>
+            </tr>
+            <tr style="font-weight: bold; height: 100px;">
+                <td style="padding: 10px;" id="td3School"></td>
+                <td style="padding: 10px;" id="td3Subject"></td>
+                <td style="padding: 10px;" id="td3Grade"></td>
+                <td style="padding: 10px;" id="td3Year"></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <div>
+            Please give details of any relevant training recently attended or any professional qualifications gained.
+        </div>
+        <br>
+        <table border="1" style="border: 1px solid black; padding: 10px; width: 100%; border-collapse: collapse;">
+            <tr style="text-align: center; background-color: gainsboro; font-size: 14px;">
+                <td style="width: 30%; vertical-align: central; padding: 10px;">Training provider/professional organisation</td>
+                <td style="width: 30%; vertical-align: central">Course or study day title</td>
+                <td style="width: 30%; vertical-align: central">Length or course or study day</td>
+                <td style="width: 10%; vertical-align: central">Date competed</td>
+            </tr>
+            <tr style="font-weight: bold; height: 100px;">
+                <td style="padding: 10px;" id="td1TrainingProvider"></td>
+                <td style="padding: 10px;" id="td1TrainingCourseTitle"></td>
+                <td style="padding: 10px;" id="td1TrainingLength"></td>
+                <td style="padding: 10px;" id="td1TrainingDateCompleted"></td>
+            </tr>
+            <tr style="font-weight: bold; height: 100px;">
+                <td style="padding: 10px;" id="td2TrainingProvider"></td>
+                <td style="padding: 10px;" id="td2TrainingCourseTitle"></td>
+                <td style="padding: 10px;" id="td2TrainingLength"></td>
+                <td style="padding: 10px;" id="td2TrainingDateCompleted"></td>
+            </tr>
+
+            <tr style="font-weight: bold; height: 100px;">
+                <td style="padding: 10px;" id="td3TrainingProvider"></td>
+                <td style="padding: 10px;" id="td3TrainingCourseTitle"></td>
+                <td style="padding: 10px;" id="td3TrainingLength"></td>
+                <td style="padding: 10px;" id="td3TrainingDateCompleted"></td>
+            </tr>
+
+        </table>
+        <br>
+        <br>
+        <table style="border: 1px solid black; padding: 10px; width: 100%;">
+            <tr>
+                <td colspan="4"><b><i>Supporting Information:</i></b> Please tell us why you are interested in this post and give details of any other
+                    information that you feel might support you application for the job.<br>
+                    <br>
+                </td>
+            </tr>
+            <tr style="height: 100px;">
+                <td colspan="4" style="border-bottom: 1px dotted gray; font-weight: bold;" id="tdSupportingInformation"></td>
+            </tr>
+        </table>
+        <table style="padding-top: 20px; color: gray; font-size: 12px;">
+            <tr>
+                <td style="width: 250pt;">Ask Care Ltd</td>
+                <td style="width: 150pt; text-align: center">Page 2 of 4</td>
+                <td style="width: 250pt; text-align: right;"><i>40 Argyle Road, Ilford, Essex, IG1 3BG</i></td>
+            </tr>
+        </table>
+    </div>
+    <div style="height: 1230px;">
+        <table style="width: 100%; background-color: #eae9e9">
+            <tr>
+                <td style="border: 1px solid black; padding: 10px; font-weight: bold; font-size: 30px;">Ask Care Employee Application Form <span style="font-size: 14px;">Ver 1.1</span>
+                    <br>
+                    <span style="font-size: 14px;" id="spanAppliedDetailPage3">Applied Date Time: _________ | Source : __________</span>
+                </td>
+                <td style="border: 1px solid black; padding: 10px; font-weight: bold; vertical-align: central">
+                    <img src="images/logo.png" style="float: right; height: 80px; width: 110px" /></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <div>
+            Please ensure that you give a full employment history starting from current and going back to
+            the date when you completed full time education or training. At interview you will be required to give reasons for
+            any gaps during your employment history.
+        </div>
+        <br>
+        <table border="1" style="border: 1px solid black; padding: 10px; width: 100%; border-collapse: collapse; font-size: 13px;">
+            <tr style="text-align: center; background-color: gainsboro; font-size: 16px;">
+                <td style="width: 25%; vertical-align: central; padding: 10px;">Employer’s name and address</td>
+                <td style="width: 25%; vertical-align: central">Position held and main duties</td>
+                <td style="width: 15%; vertical-align: central">From (month & year)</td>
+                <td style="width: 15%; vertical-align: central">To (month & year)</td>
+                <td style="width: 20%; vertical-align: central">Reason for leaving</td>
+            </tr>
+            <tr style="font-weight: bold; vertical-align: top; height: 100px;">
+                <td style="padding: 10px;">
+                    <span style="font-weight: 100">Current/ most recent employer</span><br>
+                    <span id="Span1EmpHistoryEmpNameAndAddress"></span>
+                </td>
+                <td style="padding: 10px;" id="Span1EmpHistoryPosition"></td>
+                <td style="padding: 10px;" id="Span1EmpHistoryFromDate"></td>
+                <td style="padding: 10px;" id="Span1EmpHistoryTodate"></td>
+                <td style="padding: 10px;" id="Span1EmpHistoryReason"></td>
+            </tr>
+            <tr style="font-weight: bold; vertical-align: top; height: 100px;">
+                <td style="padding: 10px;">
+                    <span style="font-weight: 100">Previous 2</span><br>
+                    <span id="Span2EmpHistoryEmpNameAndAddress"></span>
+                </td>
+                <td style="padding: 10px;" id="Span2EmpHistoryPosition"></td>
+                <td style="padding: 10px;" id="Span2EmpHistoryFromDate"></td>
+                <td style="padding: 10px;" id="Span2EmpHistoryTodate"></td>
+                <td style="padding: 10px;" id="Span2EmpHistoryReason"></td>
+            </tr>
+            <tr style="font-weight: bold; vertical-align: top; height: 100px;">
+                <td style="padding: 10px;">
+                    <span style="font-weight: 100">Previous 3</span><br>
+                    <span id="Span3EmpHistoryEmpNameAndAddress"></span>
+                </td>
+                <td style="padding: 10px;" id="Span3EmpHistoryPosition"></td>
+                <td style="padding: 10px;" id="Span3EmpHistoryFromDate"></td>
+                <td style="padding: 10px;" id="Span3EmpHistoryTodate"></td>
+                <td style="padding: 10px;" id="Span3EmpHistoryReason"></td>
+            </tr>
+            <tr style="font-weight: bold; vertical-align: top; height: 100px;">
+                <td style="padding: 10px;">
+                    <span style="font-weight: 100">Previous 4</span><br>
+                    <span id="Span4EmpHistoryEmpNameAndAddress"></span>
+                </td>
+                <td style="padding: 10px;" id="Span4EmpHistoryPosition"></td>
+                <td style="padding: 10px;" id="Span4EmpHistoryFromDate"></td>
+                <td style="padding: 10px;" id="Span4EmpHistoryTodate"></td>
+                <td style="padding: 10px;" id="Span4EmpHistoryReason"></td>
+            </tr>
+
+        </table>
+        <br>
+        <table border="1" style="border: 1px solid black; padding: 10px; width: 100%; border-collapse: collapse; font-size: 13px;">
+            <tr style="text-align: center; background-color: gainsboro; font-size: 14px;">
+                <td style="width: 30%; padding: 10px;">Availability For Work</td>
+                <td style="vertical-align: central">Monday</td>
+                <td style="vertical-align: central">Tuesday</td>
+                <td style="vertical-align: central">Wednesday</td>
+                <td style="vertical-align: central">Thursday</td>
+                <td style="vertical-align: central">Friday</td>
+                <td style="vertical-align: central">Saturday</td>
+                <td style="vertical-align: central">Sunday</td>
+            </tr>
+            <tr style="font-weight: bold">
+                <td style="vertical-align: central; padding: 5px;">Morning 6am-11am</td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdMorningMonday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdMorningTuesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdMorningWednesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdMorningThursday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdMorningFriday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdMorningSaturday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdMorningSunday"></td>
+            </tr>
+            <tr style="font-weight: bold">
+                <td style="vertical-align: central; padding: 5px;">Lunch 11am-2pm</td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLunchMonday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLunchTuesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLunchWednesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLunchThursday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLunchFriday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLunchSaturday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLunchSunday"></td>
+            </tr>
+            <tr style="font-weight: bold">
+                <td style="vertical-align: central; padding: 5px;">Afternoon 2pm-5pm</td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdAfternoonMonday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdAfternoonTuesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdAfternoonWednesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdAfternoonThursday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdAfternoonFriday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdAfternoonSaturday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdAfternoonSunday"></td>
+            </tr>
+            <tr style="font-weight: bold">
+                <td style="vertical-align: central; padding: 5px;">Evening 5pm-10am</td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdEveningMonday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdEveningTuesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdEveningWednesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdEveningThursday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdEveningFriday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdEveningSaturday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdEveningSunday"></td>
+            </tr>
+            <tr style="font-weight: bold">
+                <td style="vertical-align: central; padding: 5px;">Waking or sleeping nights 8pm-8am</td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdWakingOrSleepingNightsMonday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdWakingOrSleepingNightsTuesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdWakingOrSleepingNightsWednesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdWakingOrSleepingNightsThursday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdWakingOrSleepingNightsFriday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdWakingOrSleepingNightsSaturday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdWakingOrSleepingNightsSunday"></td>
+            </tr>
+            <tr style="font-weight: bold">
+                <td style="vertical-align: central; padding: 5px;">Live-in Care 24 hour care</td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLiveInCareMonday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLiveInCareTuesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLiveInCareWednesday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLiveInCareThursday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLiveInCareFriday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLiveInCareSaturday"></td>
+                <td style="vertical-align: central; text-align: center; color: navy" id="tdLiveInCareSunday"></td>
+            </tr>
+        </table>
+        <br>
+        <table style="border: 1px solid black; width: 100%;">
+            <tr>
+                <td style="width: 60%; padding: 10px;">Total numbers of hours a week you are seeking (Hours per week)</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding: 10px;" id="tdHoursPerWeek"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 10px;">Please note that this is not a fixed number of hours that you will be working, the amount of work is varied, and we
+                    will try our best to keep as close to this number as possible.
+                    <b><i>The more you are available for work, the more hours we will be able to give you. If you limit your availability,
+                        you limit the hours that we can give you.</i></b>
+                </td>
+            </tr>
+        </table>
+
+        <table style="padding-top: 20px; color: gray; font-size: 12px;">
+            <tr>
+                <td style="width: 250pt;">Ask Care Ltd</td>
+                <td style="width: 150pt; text-align: center">Page 3 of 4</td>
+                <td style="width: 250pt; text-align: right;"><i>40 Argyle Road, Ilford, Essex, IG1 3BG</i></td>
+            </tr>
+        </table>
+    </div>
+    <div style="min-height: 1100px;">
+        <table style="width: 100%; background-color: #eae9e9">
+            <tr>
+                <td style="border: 1px solid black; padding: 10px; font-weight: bold; font-size: 30px;">Ask Care Employee Application Form <span style="font-size: 14px;">Ver 1.1</span>
+                    <br>
+                    <span style="font-size: 14px;" id="spanAppliedDetailPage4">Applied Date Time: 20/06/2020 15:56 | Source : WEB/586</span>
+                </td>
+                <td style="border: 1px solid black; padding: 10px; font-weight: bold; vertical-align: central">
+                    <img src="images/logo.png" style="float: right; height: 80px; width: 110px" /></td>
+            </tr>
+        </table>
+        <br>
+        <table style="border: 1px solid black; padding: 10px; width: 100%;">
+            <tr>
+                <td colspan="2" style="padding-top: 10px; text-align: center; font-weight: bold;">Rehabilitation of Offenders Act</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-top: 10px;">You must complete this section if you have been convicted of a criminal offence and have not yet competed the
+                    rehabilitation period or if we have indicated that the post is exempt from the provisions of the Rehabilitation of
+                    offenders Act 1974 (as amended)</td>
+            </tr>
+            <tr>
+                <td style="width: 410px; padding-top: 8px;">Have you ever been cautioned or convicted of any criminal offence?</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px; width: 300px" id="tdCriminalOffence"></td>
+            </tr>
+            <tr>
+                <td style="width: 410px; padding-top: 8px;">or are there any prosecutions pending? </td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px; width: 300px" id="tdProsecutionsPending"></td>
+            </tr>
+            <tr>
+                <td colspan="2">If yes, give details of each offence on a separate sheet.</td>
+            </tr>
+        </table>
+        <br>
+        <div>
+            Please provide the Names and Addresses of two people who are willing to provide a reference for you.
+            <br>
+            <b><i>At least ONE reference MUST be from your current or most recent employer, or if you have not been employed
+                before, it must be from a PROFESSIONAL person, such as a tutor from college or school, or a GP.</i></b>
+        </div>
+
+        <br>
+        <table border="1" style="border: 1px solid black; padding: 10px; width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="width: 50%; text-align: center; vertical-align: top; padding: 10px;">
+                            <span style="font-weight: 100;"><b>Referee 1</b>
+                                <br>
+                                Name, address and post code<br>
+                                <span style="font-size: 14px;">(Your <b>current</b> employer. If you are unemployed you may enter your most recent past employer. No other is acceptable.)</span>
+                            </span>
+                    <br>
+                    <br>
+                    <span style="font-weight: bold" id="spanReferee1Address"></span>
+                </td>
+                <td style="width: 50%;">
+                    <table style="padding: 10px; width: 100%;">
+                        <tr>
+                            <td style="width: 150px;">Name:</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold;" id="tdReferee1Name"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 8px;">Occupation:</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee1Occuoation"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 8px;">E-Mail:</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee1Email"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 8px;">Telephone:</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee1Telephone"></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 200px; padding-top: 8px;">Capacity in which known</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee1Capacity"></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 200px; padding-top: 8px;">For how long</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee1HowLong"></td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%; text-align: center; vertical-align: top; padding: 10px;">
+                            <span style="font-weight: 100;"><b>Referee 2</b>
+                                <br>
+                                Name, address and post code<br>
+                                <span style="font-size: 14px;">(Your <b>current</b> employer. If you are unemployed you may enter your most recent past employer. No other is acceptable.)</span>
+                            </span>
+                    <br>
+                    <br>
+                    <span style="font-weight: bold" id="spanReferee2Address"></span>
+                </td>
+                <td style="width: 50%;">
+                    <table style="padding: 10px; width: 100%;">
+                        <tr>
+                            <td style="width: 150px;">Name:</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold;" id="tdReferee2Name"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 8px;">Occupation:</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee2Occuoation"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 8px;">E-Mail:</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee2Email"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 8px;">Telephone:</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee2Telephone"></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 200px; padding-top: 8px;">Capacity in which known</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee2Capacity"></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 200px; padding-top: 8px;">For how long</td>
+                            <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px;" id="tdReferee2HowLong"></td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table style="border: 1px solid black; width: 100%; padding: 10px">
+            <tr>
+                <td style="width: 60%;">Can we contact the referee(s) prior to offering you an interview? </td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold;" id="tdCanWeContactTheReferee"></td>
+            </tr>
+        </table>
+        <br>
+        <table style="border: 1px solid black; padding: 10px; width: 100%;">
+            <tr>
+                <td colspan="4"><b><i>Declaration:</i></b>  I hereby declare that the information given in this application form is accurate to the best of my
+                    knowledge and is correct. I understand that any false statements or deliberate omissions on this form may result
+                    in my application being terminated, or should I have gained employment with ASK Care Ltd. on the basis or any
+                    fraudulent statements, I will become subject to the ASK Care Ltd. disciplinary procedure and this may result in
+                    termination of my employment with ASK Care Ltd.  </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 8px;">Signature:</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px; width: 70%;"></td>
+                <td style="padding-top: 8px; padding-left: 10px;">Date</td>
+                <td style="border-bottom: 1px dotted gray; font-weight: bold; padding-top: 8px; width: 30%"></td>
+            </tr>
+        </table>
+        <table style="padding-top: 8px; color: gray; font-size: 12px;">
+            <tr>
+                <td style="width: 250pt;">Ask Care Ltd</td>
+                <td style="width: 150pt; text-align: center">Page 4 of 4</td>
+                <td style="width: 250pt; text-align: right;"><i>40 Argyle Road, Ilford, Essex, IG1 3BG</i></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
