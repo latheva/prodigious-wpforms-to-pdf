@@ -108,6 +108,9 @@ class Prodigious_Wpforms_To_Pdf_Public {
         $name='cv_'.date('m-d-Y_hia').'.pdf';
         $tpl = __DIR__ . '/template/askcare-application-form.html';
         $content = file_get_contents($tpl);
+        foreach ($form_data as $data) {
+            $content = str_replace('##'.$data['id'].'##', $data['value'], $content);
+        }
         $mpdf = new \Mpdf\Mpdf();
         $mpdf->WriteHTML($content);
         $mpdf->Output($location . $name, \Mpdf\Output\Destination::FILE);
